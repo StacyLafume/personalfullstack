@@ -1,0 +1,96 @@
+<!doctype html>
+<html>
+<head>
+    <title>21 Savage Fan Site</title>
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css"> -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+
+    <div class="page-header text-center">
+        <h1></span> Did You Run Though The Gates Of Success?</h1>
+        <p>Profile page</p>
+        <a href="/logout" class="btn btn-default btn-sm">Logout</a>
+    </div>
+
+    <div class="row">
+
+        <!-- LOCAL INFORMATION -->
+        <!-- <div class="col-sm-6">
+            <div class="well">
+                <h3><span class="fa fa-user"></span> Local</h3>
+
+                <% if (user.local.email) { %>
+                    <p>
+                        <strong>id</strong>: <%= user._id %><br>
+                        <strong>email</strong>: <%= user.local.email %><br>
+                        <strong>password</strong>: <%= user.local.password %>
+                    </p>
+
+                    <a href="/unlink/local" class="btn btn-default">Unlink</a>
+                <% } else { %>
+                    <a href="/connect/local" class="btn btn-default">Connect Local</a>
+                <% } %>
+
+            </div>
+        </div> -->
+        <div class="col-sm-6">
+          <h3>Runs</h3>
+          <ul class="messages">
+          <% for(var i=0; i<messages.length; i++) {%>
+            <li class="message">
+              <!-- in the span its going to the collection messages and grabbing the name distance and time -->
+              <span><%= messages[i].name %></span>
+                <span><%= messages[i].distance %></span>
+                  <span><%= messages[i].time %></span>
+                  <%
+
+                  <!-- created two variables for like and dislike -->
+                  let liked = ""
+
+                  let disliked=""
+
+                  console.log(messages[i].like)
+
+                      <!-- i  made an if conditional that will hold the string green nside of like of the messages.like = true and will hodle the string red inside od\f the dislike if the messages.like is false-->
+
+                   if( messages[i].like == true){
+                     <!-- The string reps the class names in my css -->
+                        liked = "green"
+                        console.log(liked)
+                  } else if(messages[i].like == false){
+
+                      disliked = "red"
+                      console.log(disliked)
+                  }%>
+                  <!-- data attribute for distance contains the propety thats stored in the data base-->
+              <buttons data-distance="<%= messages[i].distance %>" data-time="<%= messages[i].time %>" class="fa fa-thumbs-up btn btn-default btn-sm <%= liked %>" >Easy</buttons>
+              <buttons data-distance="<%= messages[i].distance %>" data-time="<%= messages[i].time %>" class="fa fa-thumbs-down btn btn-default btn-sm <%= disliked %>" >Hard</buttons>
+              <buttons data-distance="<%= messages[i].distance %>" data-time="<%= messages[i].time %>" class="fa fa-trash btn btn-default btn-sm">Delete</buttons>
+            </li>
+          <% } %>
+          </ul>
+
+          <h2>Add a Run</h2>
+        <% if (user.local.email) { %>
+          <form action="/messages" method="POST">
+
+            <input type="text" value="<%= user.local.email %>" readonly="true" placeholder="How many Miles Until Success?" name="name">
+
+            <input type="text" placeholder="How many Miles Until Success?" name="miles">
+
+            <input type="text" placeholder="How Long Did It Take You To Reach Success?" name="time">
+
+            <button type="submit">Post</button>
+          </form>
+        </div>
+        <% } %>
+
+</div>
+
+<script src="main.js"></script>
+
+</body>
+</html>

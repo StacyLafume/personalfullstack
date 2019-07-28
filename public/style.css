@@ -1,0 +1,108 @@
+
+img{
+  height: 300px;
+}
+.jumbotron{
+
+background-color: #2d2222;
+
+}
+
+.jumbotron h1 {
+    font-size: 63px;
+    color: beige;
+}
+
+.jumbotron p {
+    line-height: 1.4;
+    color: beige;
+    margin: 2%;
+}
+
+
+.container {
+    width: 1170px;
+    background-color: #482828;
+}
+h1, .h1 {
+    font-size: 36px;
+    color: beige;
+}
+h2, .h2 {
+    font-size: 30px;
+    /* text-align: -webkit-auto; */
+    margin-left: 108px;
+}
+label {
+    display: inline-block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: beige;
+}
+p {
+    margin: 0 0 10px;
+    color: beige;
+}
+
+
+.col-sm-6 {
+    width: 66%;
+    color: beige;
+    position: sticky;
+    left: 138%;
+    margin-bottom: 45px;
+}
+
+input{
+  width: 50%;
+  margin: 2%;
+  padding:2%;
+  font-size: 14px;
+  border-radius: 30px;
+}
+button {
+    width: 41%;
+    margin-left: 8%;
+    border-radius: 30px;
+}
+ul{
+  list-style:none;
+text-align: center;
+margin-right: 58%;
+}
+
+li {
+    margin: 1%;
+    text-align: center;
+    width: 107%;
+    font-size: 20px;
+}
+
+.red{
+  background-color:#ff7878;
+}
+
+.green{
+  background-color: #24f724;
+}
+
+/* .col-sm-6 {
+    width: 49%;
+    color: beige;
+    /* position: sticky; */
+    /* left: 369%; */
+    /* margin-bottom: 45px; */
+
+
+.container {
+    width: 100%;
+    padding-right: 23%;
+    padding-top: 30px;
+    background-color: #482828;
+}
+
+
+body {
+    /* padding-top: 80px; */
+    word-wrap: break-word;
+}
